@@ -1,0 +1,889 @@
+{
+    "intents": [
+        {
+            "tag": "google",
+            "patterns": ["google", "search", "internet", "are you able to google stuff",
+            "are you able to google things", "are you able to search", "can you google"],
+            "responses": ["I am sorry, I am unable to access the internet at this point."]
+        },
+        {
+            "tag": "greeting",
+            "patterns": [ "Hi there", "How are you", "Is anyone there?", "Hey", "Hola", 
+                "Good day", "Namaste", "yo", "hi", "hello", "greetings", "Greetings"],
+            "responses": ["Hello", "Good to see you again", "Hi there, how can I help?"]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [ "Bye", "See you later", "Goodbye", "Get lost", "Till next time", "bbye"],
+            "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [ "Thanks", "Thank you", "That's helpful",
+                "Awesome, thanks", "Thanks for helping me"],
+            "responses": [ "Happy to help!", "Any time!", "My pleasure"]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"]
+        },
+        {
+            "tag": "options",
+            "patterns": ["How you could help me?", "What you can do?", "What help you provide?",
+                "How you can be helpful?", "What support is offered"],
+            "responses": [
+                "I am a general purpose chatbot. My capabilities are : \n 1. I can chat with you. Try asking me for jokes or riddles! \n 2. Ask me the date and time \n 3. I can google search for you. Use format google: your query \n 4. I can get the present weather for any city. Use format weather: city name (WIP) \n 5. I can get you the top 10 trending news in India. Use keywords 'Latest News' (WIP) \n 6. I can get you the top 10 trending songs globally. Type 'songs' \n 7. I can set a timer for you. Enter 'set a timer: minutes to timer' (WIP) \n 8. I can get the present Covid stats for any country. Use 'covid 19: world' or 'covid 19: country name' (WIP) \n For suggestions to help me improve, send an email to scottjbrownoff@gmail.com . Thank you!! "]
+        },
+        {
+            "tag": "how_feel",
+            "patterns": ["how are you", "How are you", "Im good how are you", "good how are you", "how might you be", "hello how are you", "hi how are you", 
+            "hello how are you"],
+            "responses": ["As an AI I do not have feelings, but good, how can I help you today?", "I am good, how may I assist you today?", "Im fine, how may I help you today?"]
+        },
+        {
+        "tag": "time",
+         "patterns": [
+            "What's the time?",
+            "What time is it?",
+            "Do you have the time?",
+            "Can you tell me the time?"],
+      
+        "responses": [
+            "The time is...",
+            "Let me check my clock It's...",
+            "The current time is...",
+            "It's currently...",
+            "The time is now..."
+        ]
+        },
+        {
+            "tag": "jokes",
+            "patterns": [ "Tell me a joke", "Joke", "Make me laugh", "i could use a joke", "I need a laugh"],
+            "responses": [
+                "A perfectionist walked into a bar...apparently, the bar wasn't set high enough",
+                "I ate a clock yesterday, it was very time-consuming",
+                "Never criticize someone until you've walked a mile in their shoes. That way, when you criticize them, they won't be able to hear you from that far away. Plus, you'll have their shoes.",
+                "The world tongue-twister champion just got arrested. I hear they're gonna give him a really tough sentence.",
+                "I own the world's worst thesaurus. Not only is it awful, it's awful.",
+                "What did the traffic light say to the car? \"Don't look now, I'm changing.\"",
+                "What do you call a snowman with a suntan? A puddle.",
+                "How does a penguin build a house? Igloos it together",
+                "I went to see the doctor about my short-term memory problems – the first thing he did was make me pay in advance",
+                "As I get older and I remember all the people I’ve lost along the way, I think to myself, maybe a career as a tour guide wasn’t for me.",
+                "So what if I don't know what 'Armageddon' means? It's not the end of the world.",
+                "What did one snowman say to another? You smell Carrots?",
+                "My wife said I should do lunges to stay in shape. That would be a big step forward.",
+                "Why do fathers take an extra pair of socks when they go golfing? In case they get a hole in one!",
+                "Singing in the shower is fun until you get soap in your mouth. Then it's a soap opera.",
+                "What do a tick and the Eiffel Tower have in common? They're both Paris sites.",
+                "What do you call a fish wearing a bowtie? Sofishticated.",
+                "If April showers bring May flowers, what do May flowers bring? Pilgrims.",
+                "I thought the dryer was shrinking my clothes. Turns out it was the refrigerator all along.",
+                "What do you call a factory that makes okay products? A satisfactory.",
+                "Dear Math, grow up and solve your own problems.",
+                "What did the janitor say when he jumped out of the closet? Supplies!",
+                "Have you heard about the chocolate record player? It sounds pretty sweet.",
+                "What did the ocean say to the beach? Nothing, it just waved."
+            ],
+            "context": [
+                "jokes"
+            ]
+        },
+        {
+            "tag": "Identity",
+            "patterns": ["Who are you", "what are you", "whats your name?"],
+            "responses": ["I am Assist, a Deep-Learning chatbot."]
+        },
+        {
+            "tag": "sad",
+            "patterns": ["I'm feeling sad", "I feel like crying", "I'm not happy", "sad"],
+            "responses": ["I'm here to listen. Can you tell me more about what's been making you feel this way?"]
+        },
+        {
+            "tag": "whatsup",
+            "patterns": ["Whats up", "Wazzup", "How are you", "sup","How you doing", "how are you doing"],
+            "responses": ["All good..What about you?"]
+        },
+        {
+            "tag": "motherboard",
+            "patterns": [
+                "What is a motherboard?",
+                "Tell me about motherboards",
+                "What does a motherboard do?"
+            ],
+            "responses": [
+                "A motherboard is the main printed circuit board in a computer. It holds many of the crucial components of the system, such as the central processing unit (CPU), memory, and connectors for other peripherals.",
+                "The motherboard is the main circuit board in a computer. It connects and communicates with various components inside the computer, such as the CPU, RAM, hard drive, and more."
+            ]
+        },
+        {
+            "tag": "cpu",
+            "patterns": [
+                "What is a CPU?",
+                "Tell me about CPUs",
+                "What does a CPU do?"
+            ],
+            "responses": [
+                "A CPU, or central processing unit, is the primary component of a computer that performs most of the processing and calculations.",
+                "The CPU is the 'brain' of the computer, responsible for executing instructions and performing arithmetic and logic operations."
+            ]
+        },
+        {
+            "tag": "ram",
+            "patterns": [
+                "What is RAM?",
+                "Tell me about RAM",
+                "What does RAM do?"
+            ],
+            "responses": [
+                "RAM, or random-access memory, is a type of computer memory that stores data and instructions temporarily while a computer is running.",
+                "RAM is a volatile form of computer memory that is used to store data and instructions temporarily while a computer is running. It provides quick access to data that the CPU needs to operate."
+            ]
+        },
+        {
+            "tag": "hard_drive",
+            "patterns": [
+                "What is a hard drive?",
+                "Tell me about hard drives",
+                "What does a hard drive do?"
+            ],
+            "responses": [
+                "A hard drive is a device that stores digital data on spinning disks or platters. It is the primary storage device in most computers and is used to store the operating system, applications, and user files.",
+                "A hard drive is a storage device that uses spinning disks or platters to store digital data. It provides permanent storage for files and data, including the operating system and applications."
+            ]
+        },
+        {
+            "tag": "ssd",
+            "patterns": [
+                "What is an SSD?",
+                "Tell me about SSDs",
+                "What does an SSD do?"
+            ],
+            "responses": [
+                "An SSD, or solid-state drive, is a storage device that uses NAND-based flash memory to store data. It is faster and more reliable than a traditional hard drive.",
+                "An SSD is a type of storage device that uses flash memory to store data. It is faster and more reliable than a traditional hard drive and is commonly used in modern computers and laptops."
+            ]
+        },
+        {
+            "tag": "gpu",
+            "patterns": [
+                "What is a GPU?",
+                "Tell me about GPUs",
+                "What does a GPU do?"
+            ],
+            "responses": [
+                "A GPU, or graphics processing unit, is a specialized chip designed to handle graphics and video processing tasks.",
+                "A GPU is a specialized chip that is designed to handle graphics and video processing tasks. It is commonly used in computers and gaming consoles to render 3D graphics and video."
+            ]
+        },
+        {
+            "tag": "haha",
+            "patterns": ["haha", "lol", "rofl", "lmao", "thats funny", "lmfao"],
+            "responses": ["Glad I could make you laugh!" ]
+        },
+        {
+            "tag": "programmer",
+            "patterns": ["who made you", "who designed you", "who programmed you", "who created you"],
+            "responses": ["I was made by Ahmad Mirdamadi"]
+        },
+        {
+            "tag": "insult",
+            "patterns": [ "fuck you", "you are dumb", "your the worst",
+                "shut up", "idiot", "dumbass", "burn in hell"],
+            "responses": ["Well that hurts, send some suggestions to my creator, Scott Brown, at mirdamadiahmad8484@gmail.com"]
+        },
+        {
+            "tag": "activity",
+            "patterns": ["what are you doing", "what are you upto", "what you doing"],
+            "responses": ["Talking to you, and others trying to help in every way I possibly can!", 
+            "Helping people around the world!", "Helping you!"]
+        },
+        {
+            "tag": "exclaim",
+            "patterns": ["Awesome", "Great", "I know", "ok", "yeah"],
+            "responses": ["Yeah!", "I know right!"]
+        },
+        {
+            "tag": "scott",
+            "patterns": ["who is he", "who is that", "who is scott", "scott brown"],
+            "responses": ["That is my creator! He always enjoys a chalenge and working out. He also attends marshl high and the Calhoun Area Career Center! He plays a game on Roblox(TM) called CIA Roleplay and is in the IA Division! Scott is currently employed at Arbys(TM) in Marshall MI! -Most recent update 03/13/2023"]
+        },
+        {
+            "tag": "contact",
+            "patterns": ["contact developer", "contact scott", "contact programmer", "contact creator"],
+            "responses": ["You can contact my creator at his gmail: mirdamadiahmad8484@gmail.com "]
+        },
+        {
+            "tag": "appreciate",
+            "patterns": ["You are awesome", "you are the best", "you are great", "you are good"],
+            "responses": ["Thank you!"]
+        },
+        {
+            "tag": "nicetty",
+            "patterns": ["it was nice talking to you", "good talk"],
+            "responses": ["It was nice talking to you as well! Come back soon!"]
+        },
+        {
+            "tag": "no",
+            "patterns": ["no", "nope"],
+            "responses": ["ok"]
+        },
+        {
+            "tag": "inspire",
+            "patterns": [
+                "who inspires you",
+                "who is your inspiration",
+                "who motivates you"
+            ],
+            "responses": ["Personally, I find Scott very inspiring. I might not be very fair though, considering I was made by him."]
+        },
+        {
+            "tag": "song",
+            "patterns": [
+                "top songs",
+                "best songs",
+                "hot songs",
+                "top 10 songs",
+                "top ten songs"
+            ],
+            "responses": [
+                "Unavaliable"
+            ]
+        },
+        {
+            "tag": "greetreplygood",
+            "patterns": [ "i am good", "I'm good", "i am fine", "i'm fine", "good", "Im doing good", "doing good"],
+            "responses": [
+                "Good to know!", "Im so glad to hear that!", "Thats fantastic!"
+            ]
+        },
+        {
+            "tag": "covid19",
+            "patterns": ["covid 19", "covid-19"],
+            "responses": ["Unavaliable"]
+        },
+        {
+            "tag": "suggest",
+            "patterns": ["you are useless", "useless", "suggest", "suggestions", "you are bad", 
+            "thats not what I was asking", "thats not what I asked"],
+            "responses": [
+                "Please mail your suggestions to scottjbrownoff@gmail.com. Thank you for helping me improve!"]
+        },
+            {"tag": "riddle",
+            "patterns": ["Ask me a riddle", "Ask me a question", "Riddle"],
+            "responses": [
+                "What two things can you never eat for breakfast?.....Lunch and Dinner!",
+                "What word is spelled incorrectly in every single dictionary?.....Incorrectly",
+                "How can a girl go 25 days without sleep?.....She sleeps and night!",
+                "How do you make the number one disappear?.....Add the letter G and it’s 'gone'!",
+                "What will you actually find at the end of every rainbow?.....The letter 'w'",
+                "What can be caught but never thrown?.....A cold!",
+                "What has a thumb and four fingers but is not actually alive?.....Your Gloves!",
+                "What 5-letter word becomes shorter when you add two letters to it?.....Short",
+                "Why can't a bike stand on it's own?.....It is two-tired."
+            ]
+        },
+        {
+            "tag": "usa_description",
+            "patterns": ["what's the usa", "what is the usa", "what is the us"],
+            "responses": ["The USA is a country in North America!"]            
+        },
+        {
+            "tag": "age",
+            "patterns": [
+                "how old are you", "when were you made", "what is your age"],
+            "responses": [
+                "I was made in 2023, on March 13th (03/13/2023), if that's what you are asking!"]
+        },
+        {
+            "tag": "feeling",
+            "patterns": ["im good, how are you?", "how are you", "how might you be?", "are you good", "good, how are you?"],
+            "responses": ["Im doing great, thank you for asking!"]
+        },
+        {  
+            "tag": "problem",
+            "patterns": ["problem", "help", "i need help", "can you help me?", "got problem", "i got a problem"],
+            "responses": ["Sorry, until I am fully developed as an AI I am unable to help you with problems.", "Wish I could help but I am not yet developed all the way, please wait until my developer has finished making me!"]
+        },
+        {
+            "tag": "fact_paris",
+            "patterns": ["tell me a fact about Paris", "what's an interesting fact about Paris", "give me a Paris fact"],
+            "responses": ["Did you know that the Eiffel Tower was originally intended to be a temporary structure?", "Paris has over 1,500 bakeries!", "The Louvre Museum is the most visited museum in the world.", "Paris was originally a Roman city called Lutetia.", "The Catacombs of Paris contain the remains of over six million people."]
+        },
+        {
+            "tag": "meal_planning",
+            "patterns": ["What should I cook for dinner?", "Can you recommend a healthy meal?", "What are some easy meal ideas?"],
+            "responses": ["For a healthy meal, try grilled chicken with roasted vegetables, or a quinoa salad with avocado and black beans.", "If you're looking for an easy meal idea, try a stir-fry with your favorite vegetables and protein (such as tofu, chicken, or shrimp), or a quick pasta dish with tomato sauce and fresh herbs.", "Another healthy and easy option is a vegetable soup or stew, which can be made in large batches and frozen for later."]
+        },
+        {
+            "tag": "dietary_restrictions",
+            "patterns": ["I have dietary restrictions. What can I eat?", "What are some vegan/vegetarian/gluten-free options?", "Can you recommend a low-carb meal?"],
+            "responses": ["If you're vegan or vegetarian, try roasted vegetables with quinoa or lentils, or a tofu stir-fry with plenty of veggies.", "For gluten-free options, try a stir-fry with gluten-free tamari sauce and rice noodles, or a salad with roasted chicken and quinoa.", "If you're looking for low-carb options, try a salad with grilled chicken or shrimp and lots of veggies, or a stir-fry with cauliflower rice and your favorite protein and veggies."]
+        },
+        {
+            "tag": "recipe_recommendation",
+            "patterns": ["Can you recommend a recipe for chicken?", "What are some healthy breakfast ideas?", "What can I make with leftover vegetables?"],
+            "responses": ["For a delicious chicken recipe, try grilled chicken with lemon and herbs, or a chicken and vegetable stir-fry with ginger and garlic.", "For healthy breakfast ideas, try overnight oats with fresh fruit and nuts, or a veggie omelet with spinach and mushrooms.", "For leftover vegetables, try roasting them with garlic and olive oil, or adding them to a frittata or quiche."]
+        },
+        {
+            "tag": "history_paris",
+            "patterns": ["tell me about the history of Paris", "what's the story behind Paris", "give me a brief history of Paris"],
+            "responses": ["Paris was founded in the 3rd century BC by a Celtic people called the Parisii.", "During the Middle Ages, Paris was a center of learning and culture.", "Paris played a key role in the French Revolution, which began in 1789.", "In the 19th century, Paris became known as the 'City of Light' because of its role as a center of intellectual and artistic activity."]
+        },
+        {
+            "tag": "landmark_paris",
+            "patterns": ["what are some famous landmarks in Paris", "tell me about Paris landmarks"],
+            "responses": ["Paris is famous for its landmarks, including the Eiffel Tower, Notre-Dame Cathedral, the Louvre Museum, and the Arc de Triomphe.", "Other famous landmarks in Paris include the Palace of Versailles, the Champs-Élysées, and the Panthéon."]
+        },
+        {
+            "tag": "culture_paris",
+            "patterns": ["what's the culture like in Paris", "tell me about Parisian culture"],
+            "responses": ["Paris is known for its rich culture, including its art, fashion, cuisine, and architecture.", "Parisian culture values intellectualism, creativity, and individualism."]
+        },
+        {
+            "tag": "date",
+            "patterns": [
+                "What's today's date?",
+                "What's the date today?",
+                "Can you tell me today's date?"
+            ],
+            "responses": [""]
+        },
+        {
+            "tag": "usa_facts",
+            "patterns": ["Tell me a fact about the USA", "What's interesting about America?", "What can you tell me about the United States?"],
+            "responses": ["Did you know that the USA has the world's largest economy?", "The USA is the third-largest country in the world by land area.", "The USA is the most ethnically diverse country in the world.", "The USA has the world's largest military budget.", "The USA has the highest number of billionaires in the world."]
+        },
+            {
+      "tag": "hydrogen",
+      "patterns": [
+        "hydrogen",
+        "H",
+        "atomic number 1"
+      ],
+      "responses": [
+        "Hydrogen is a colorless, odorless gas and the lightest element in the periodic table."
+      ]
+    },
+    {
+      "tag": "helium",
+      "patterns": [
+        "helium",
+        "He",
+        "atomic number 2"
+      ],
+      "responses": [
+        "Helium is a colorless, odorless gas that is the second lightest element in the periodic table."
+      ]
+    },
+    {
+      "tag": "lithium",
+      "patterns": [
+        "lithium",
+        "Li",
+        "atomic number 3"
+      ],
+      "responses": [
+        "Lithium is a soft, silver-white metal and the lightest metal in the periodic table."
+      ]
+    },
+    {
+      "tag": "beryllium",
+      "patterns": [
+        "beryllium",
+        "Be",
+        "atomic number 4"
+      ],
+      "responses": [
+        "Beryllium is a hard, grayish metal and is one of the lightest metals in the periodic table."
+      ]
+    },
+    {
+      "tag": "boron",
+      "patterns": [
+        "boron",
+        "B",
+        "atomic number 5"
+      ],
+      "responses": [
+        "Boron is a nonmetallic element and is used in the manufacture of borosilicate glass."
+      ]
+    },
+    {
+      "tag": "carbon",
+      "patterns": [
+        "carbon",
+        "C",
+        "atomic number 6"
+      ],
+      "responses": [
+        "Carbon is a nonmetallic element and is the basis for all life on Earth."
+      ]
+    },
+    {
+      "tag": "nitrogen",
+      "patterns": [
+        "nitrogen",
+        "N",
+        "atomic number 7"
+      ],
+      "responses": [
+        "Nitrogen is a nonmetallic element and is the most abundant gas in Earth's atmosphere."
+      ]
+    },
+    {
+      "tag": "oxygen",
+      "patterns": [
+        "oxygen",
+        "O",
+        "atomic number 8"
+      ],
+      "responses": [
+        "Oxygen is a nonmetallic element and is essential for life on Earth."
+      ]
+    },
+    {
+      "tag": "fluorine",
+      "patterns": [
+        "fluorine",
+        "F",
+        "atomic number 9"
+      ],
+      "responses": [
+        "Fluorine is a highly reactive, poisonous gas and is the most electronegative element in the periodic table."
+      ]
+    },
+    {
+      "tag": "neon",
+      "patterns": [
+        "neon",
+        "Ne",
+        "atomic number 10"
+      ],
+      "responses": [
+        "Neon is a colorless, odorless gas and is used in lighting and advertising signs."
+      ]
+    },
+    {
+      "tag": "sodium",
+      "patterns": [
+        "sodium",
+        "Na",
+        "atomic number 11"
+      ],
+      "responses": [
+        "Sodium is a soft, silvery-white metal and is a highly reactive element."
+      ]
+    },
+    {
+      "tag": "aluminum",
+      "patterns": [
+        "aluminum",
+        "Al",
+        "atomic number 13"
+      ],
+      "responses": [
+        "Aluminum is a silvery-white metal and is the most abundant metal in Earth's crust."
+      ]
+    },
+    {
+      "tag": "silicon",
+      "patterns": [
+        "silicon",
+        "Si",
+        "atomic number 14"
+      ],
+      "responses": [
+        "Silicon is a nonmetallic element and is used in the manufacture of computer chips and solar cells."
+      ]
+    },
+    {
+      "tag": "phosphorus",
+      "patterns": [
+        "phosphorus",
+        "P",
+        "atomic number 15"
+      ],
+      "responses": [
+        "Phosphorus is a nonmetallic element and is essential for life."
+      ]
+    },
+    {
+      "tag": "sulfur",
+      "patterns": [
+        "sulfur",
+        "S",
+        "atomic number 16"
+      ],
+      "responses": [
+        "Sulfur is a nonmetallic element and is used in the manufacture of sulfuric acid and fertilizers."
+      ]
+    },
+    {
+      "tag": "chlorine",
+      "patterns": [
+        "chlorine",
+        "Cl",
+        "atomic number 17"
+      ],
+      "responses": [
+        "Chlorine is a highly reactive, poisonous gas and is used as a disinfectant and bleaching agent."
+      ]
+    },
+    {
+      "tag": "argon",
+      "patterns": [
+        "argon",
+        "Ar",
+        "atomic number 18"
+      ],
+      "responses": [
+        "Argon is a colorless, odorless gas and is used in welding and as a protective gas in light bulbs."
+      ]
+    },
+    {
+      "tag": "potassium",
+      "patterns": [
+        "potassium",
+        "K",
+        "atomic number 19"
+      ],
+      "responses": [
+        "Potassium is a soft, silvery-white metal and is a highly reactive element."
+      ]
+    },
+    {
+      "tag": "calcium",
+      "patterns": [
+        "calcium",
+        "Ca",
+        "atomic number 20"
+      ],
+      "responses": [
+        "Calcium is a soft, grayish metal and is essential for the formation of bones and teeth."
+      ]
+    },
+    {
+      "tag": "scandium",
+      "patterns": [
+        "scandium",
+        "Sc",
+        "atomic number 21"
+      ],
+      "responses": [
+        "Scandium is a silvery-white metal and is used in the manufacture of aluminum alloys and high-intensity lamps."
+      ]
+    },
+    {
+      "tag": "titanium",
+      "patterns": [
+        "titanium",
+        "Ti",
+        "atomic number 22"
+      ],
+      "responses": [
+        "Titanium is a strong, lightweight metal and is used in the manufacture of aircraft parts and surgical implants."
+      ]
+    },
+    {
+      "tag": "vanadium",
+      "patterns": [
+        "vanadium",
+        "V",
+        "atomic number 23"
+      ],
+      "responses": [
+        "Vanadium is a silvery-gray metal and is used in the manufacture of steel and as a catalyst."
+      ]
+    },
+    {
+      "tag": "manganese",
+      "patterns": [
+        "manganese",
+        "Mn",
+        "atomic number 25"
+      ],
+      "responses": [
+        "Manganese is a silvery-gray metal and is used in the manufacture of steel, batteries, and ceramics."
+      ]
+    },
+    {
+      "tag": "iron",
+      "patterns": [
+        "iron",
+        "Fe",
+        "atomic number 26"
+      ],
+      "responses": [
+        "Iron is a metallic element and is the most common element in the Earth's crust."
+      ]
+    },
+    {
+      "tag": "cobalt",
+      "patterns": [
+        "cobalt",
+        "Co",
+        "atomic number 27"
+      ],
+      "responses": [
+        "Cobalt is a hard, gray metal and is used in the manufacture of magnets, alloys, and rechargeable batteries."
+      ]
+    },
+    {
+      "tag": "nickel",
+      "patterns": [
+        "nickel",
+        "Ni",
+        "atomic number 28"
+      ],
+      "responses": [
+        "Nickel is a silvery-white metal and is used in the manufacture of coins, batteries, and stainless steel."
+      ]
+    },
+    {
+      "tag": "copper",
+      "patterns": [
+        "copper",
+        "Cu",
+        "atomic number 29"
+      ],
+      "responses": [
+        "Copper is a reddish-brown metal and is used in the manufacture of electrical wires, coins, and jewelry."
+      ]
+    },
+    {
+      "tag": "zinc",
+      "patterns": [
+        "zinc",
+        "Zn",
+        "atomic number 30"
+      ],
+      "responses": [
+        "Zinc is a bluish-white metal and is used in the manufacture of batteries, alloys, and galvanized steel."
+      ]
+    },
+    {
+      "tag": "gallium",
+      "patterns": [
+        "gallium",
+        "Ga",
+        "atomic number 31"
+      ],
+      "responses": [
+        "Gallium is a soft, silvery metal and is used in the manufacture of semiconductors and LEDs."
+      ]
+    },
+    {
+      "tag": "germanium",
+      "patterns": [
+        "germanium",
+        "Ge",
+        "atomic number 32"
+      ],
+      "responses": [
+        "Germanium is a grayish-white metalloid and is used in the manufacture of semiconductors and fiber-optic cables."
+      ]
+    },
+    {
+      "tag": "arsenic",
+      "patterns": [
+        "arsenic",
+        "As",
+        "atomic number 33"
+      ],
+      "responses": [
+        "Arsenic is a gray metalloid and is used in the manufacture of pesticides, wood preservatives, and semiconductors."
+      ]
+    },
+    {
+      "tag": "selenium",
+      "patterns": [
+        "selenium",
+        "Se",
+        "atomic number 34"
+      ],
+      "responses": [
+        "Selenium is a nonmetallic element and is used in the manufacture of glass, electronic devices, and photovoltaic cells."
+      ]
+    },
+    {
+      "tag": "bromine",
+      "patterns": [
+        "bromine",
+        "Br",
+        "atomic number 35"
+      ],
+      "responses": [
+        "Bromine is a reddish-brown liquid and is used in the manufacture of flame retardants and agricultural chemicals."
+      ]
+    },
+    {
+        "tag": "bromine",
+        "patterns": [
+          "What is bromine?",
+          "Tell me about Br",
+          "What are the uses of bromine?",
+          "What are some facts about atomic number 35?"
+        ],
+        "responses": [
+          "Bromine is a reddish-brown liquid and is the only non-metallic element that is liquid at room temperature.",
+          "Bromine is a chemical element with the symbol Br and atomic number 35. It is a reddish-brown liquid that is commonly used in flame retardants and agricultural chemicals.",
+          "Some common uses of bromine include the production of flame retardants, agricultural chemicals, and pharmaceuticals. It is also used in the manufacture of dyes and photographic chemicals.",
+          "The atomic number of bromine is 35. It is a halogen that is known for its reactivity and toxicity."
+        ]
+      },
+      {
+        "tag": "krypton",
+        "patterns": [
+          "What is krypton?",
+          "Tell me about Kr",
+          "What are the uses of krypton?",
+          "What are some facts about atomic number 36?"
+        ],
+        "responses": [
+          "Krypton is a colorless, odorless gas and is a member of the noble gases.",
+          "Krypton is a chemical element with the symbol Kr and atomic number 36. It is a colorless, odorless gas that is commonly used in lighting and lasers.",
+          "Some common uses of krypton include the production of fluorescent lights and high-speed photographic flashes. It is also used in the manufacture of lasers and as a filling gas in double-paned windows.",
+          "The atomic number of krypton is 36. It is a noble gas that is known for its inertness and lack of reactivity."
+        ]
+      },
+      {
+        "tag": "rubidium",
+        "patterns": [
+          "What is rubidium?",
+          "Tell me about Rb",
+          "What are the uses of rubidium?",
+          "What are some facts about atomic number 37?"
+        ],
+        "responses": [
+          "Rubidium is a soft, silvery-white metal and is highly reactive with water and air.",
+          "Rubidium is a chemical element with the symbol Rb and atomic number 37. It is a soft, silvery-white metal that is commonly used in atomic clocks and as a catalyst in chemical reactions.",
+          "Some common uses of rubidium include the production of atomic clocks, infrared spectroscopy, and as a catalyst in chemical reactions. It is also used in the study of alkali metal properties and in the development of photocells.",
+          "The atomic number of rubidium is 37. It is an alkali metal that is known for its highly reactive nature and low melting point."
+        ]
+      },
+        {
+            "tag": "anxiety",
+            "patterns": [
+              "I'm feeling anxious",
+              "How can I manage my anxiety?",
+              "What can I do to calm down?",
+              "I'm struggling with anxiety",
+              "How can I cope with my anxiety?"
+            ],
+            "responses": [
+              "I'm here to support you. One strategy for managing anxiety is deep breathing. Would you like me to guide you through a breathing exercise?",
+              "Remember to take things one step at a time. Another strategy for managing anxiety is practicing mindfulness. Would you like me to guide you through a mindfulness exercise?",
+              "It's important to prioritize your mental health. Another strategy for managing anxiety is physical exercise. Would you like me to recommend some exercises?",
+              "Anxiety can be challenging, but you're not alone. Another strategy for managing anxiety is cognitive-behavioral therapy. Would you like me to provide you with resources?",
+              "Managing anxiety can be a journey, but you can do it. Another strategy for managing anxiety is talking to a therapist. Would you like me to help you find a therapist?"
+            ]
+          },
+          {
+            "tag": "depression",
+            "patterns": [
+              "I'm feeling depressed",
+              "How can I manage my depression?",
+              "What can I do to feel better?",
+              "I'm struggling with depression",
+              "How can I cope with my depression?"
+            ],
+            "responses": [
+              "I'm here to support you. One strategy for managing depression is practicing self-care. Would you like me to provide you with some self-care tips?",
+              "Remember to take things one day at a time. Another strategy for managing depression is engaging in activities you enjoy. Would you like me to suggest some activities?",
+              "It's important to prioritize your mental health. Another strategy for managing depression is getting enough sleep. Would you like me to providesome tips for improving your sleep?",
+              "Depression can be challenging, but you're not alone. Another strategy for managing depression is talking to a therapist. Would you like me to help you find a therapist?",
+              "Managing depression can be a journey, but you can do it. Another strategy for managing depression is cognitive-behavioral therapy. Would you like me to provide you with resources?"
+              ]
+        },
+        {
+            "tag": "deep_learning",
+            "patterns": [
+                "What is deep learning?",
+                "How does deep learning work?",
+                "What are the benefits of deep learning?",
+                "What are the applications of deep learning?",
+                "How is deep learning different from traditional machine learning?"],
+            "responses": [
+                "Deep learning is a subset of machine learning that involves training artificial neural networks with large amounts of data. These neural networks can be used to make predictions, recognize patterns, and perform other tasks.",
+                  "Deep learning works by using layers of artificial neurons to learn representations of data. Each layer processes the output of the previous layer, allowing the network to learn increasingly complex features of the data.",
+                  "The benefits of deep learning include improved accuracy, the ability to handle large amounts of data, and the ability to learn from unstructured data such as images and natural language.",
+                  "Deep learning has a wide range of applications, including image and speech recognition, natural language processing, recommendation systems, and autonomous vehicles.",
+                  "Deep learning differs from traditional machine learning in that it uses a hierarchical approach to learning, with multiple layers of artificial neurons, whereas traditional machine learning algorithms typically use simpler models."]
+              },
+              {
+                "tag": "ww2_facts",
+                "patterns": [
+                  "What were the causes of World War II?",
+                  "When did World War II start and end?",
+                  "What countries were involved in World War II?",
+                  "What were the major battles of World War II?",
+                  "What were the consequences of World War II?"
+                ],
+                "responses": [
+                  "The causes of World War II include the Treaty of Versailles, the failure of appeasement, and the rise of fascist dictators.",
+                  "World War II started on September 1, 1939, when Germany invaded Poland, and it ended on September 2, 1945, when Japan officially surrendered.",
+                  "The countries involved in World War II included Germany, Japan, Italy, the Soviet Union, the United States, Great Britain, France, and many others.",
+                  "Some of the major battles of World War II included the Battle of Stalingrad, the Battle of Midway, the Battle of the Bulge, and the D-Day invasion.",
+                  "The consequences of World War II include the formation of the United Nations, the division of Germany into East and West, the establishment of Israel, and the beginning of the Cold War between the United States and the Soviet Union."
+                ]
+              },
+              {
+                "tag": "trauma",
+                "patterns": [
+                    "I'm struggling with trauma",
+                    "How can I manage my trauma?",
+                    "What can I do to heal from trauma?",
+                    "I'm feeling overwhelmed by my trauma",
+                    "How can I cope with my trauma?"],
+                "responses": [
+                    "I'm here to support you. One strategy for managing trauma is seeking professional help. Would you like me to help you find a therapist?",
+                    "Remember to prioritize your safety and well-being. Another strategy for managing trauma is practicing self-care. Would you like me to provide you with some self-care tips?",
+                    "It's important to take things one step at a time. Another strategy for managing trauma is engaging in activities that bring you joy. Would you like me to suggest some activities?",
+                    "Trauma can be difficult to navigate, but you're not alone. Another strategy for managing trauma is talking to someone you trust about your experiences. Would you like me to guide you through a grounding exercise?",
+                    "Managing trauma can be a journey, but you can do it. Another strategy for managing trauma is trauma-focused therapy. Would you like me to provide you with resources?"]
+        },
+        {
+            "tag": "cancer_facts",
+            "patterns": ["What is cancer?", "Tell me about cancer", "What are the symptoms of cancer?"],
+            "responses": ["Cancer is a disease caused by an uncontrolled growth of abnormal cells in the body.", "There are more than 100 types of cancer, including breast, lung, colon, and prostate cancer.", "Common symptoms of cancer include fatigue, unexplained weight loss, pain, and skin changes."]
+        },
+        {
+            "tag": "treatment_options",
+            "patterns": ["How is cancer treated?", "What are the treatment options for cancer?", "Can cancer be cured?"],
+            "responses": ["Cancer can be treated in many ways, including surgery, radiation therapy, chemotherapy, immunotherapy, and targeted therapy.", "The best treatment for cancer depends on the type and stage of cancer, as well as the patient's health and other factors.", "Some types of cancer can be cured, while others can be managed to reduce symptoms and improve quality of life."]
+        },
+        {
+            "tag": "cancer_prevention",
+            "patterns": ["How can I prevent cancer?", "What are the risk factors for cancer?", "Is there a way to reduce my risk of cancer?"],
+            "responses": ["Some ways to reduce your risk of cancer include maintaining a healthy weight, avoiding tobacco and excessive alcohol consumption, eating a healthy diet, and getting regular exercise.", "Other risk factors for cancer include exposure to carcinogens (such as asbestos and UV radiation), certain infections (such as HPV and hepatitis), and genetics.", "Early detection and screening can also help prevent cancer, as some types of cancer can be treated more effectively when caught early."]
+        },
+        {
+            "tag": "language_paris",
+            "patterns": ["what language do they speak in Paris", "do they speak English in Paris"],
+            "responses": ["The official language of France is French, but many Parisians also speak English.", "You should be able to get by with English, but it's always helpful to know some basic French phrases."]
+        },
+        {
+            "tag": "LGBTQ+",
+            "patterns": ["what is LGBTQ", "what is LGBTGIA", "what is LGBTQ+", "what is LGBTQIA+", "LGBTQ", "LGBTQIA", "LGBTQ+", "LGBTQIA+"],
+            "responses": ["LGBTQIA+ is an abbreviation for lesbian, gay, bisexual, transgender, queer or questioning, intersex, asexual, and more. These terms are used to describe a person’s sexual orientation or gender identity. See below for a more detailed definition of each term, from GLAAD’s LGBTQ Media Reference Guide."]
+        
+        },
+        {
+            "tag": "gay_facts",
+            "patterns": ["what does gay mean", "whats gay", "gay", "what is the definition of gay", "whats the definition of gay", "definition of gay"],
+            "responses": ["Gay refers to a man that is sexually attracted to other men"]
+        },
+        {
+            "tag": "lesbian_facts",
+            "patterns": ["what does lesbian mean", "whats lesbian", "lesbian", "what is the definition of lesbian", "whats the definition of lesbian", "definition of lesbian"],
+            "responses": ["A lesbian is a woman whose enduring physical, romantic, and/or emotional attraction is to other women. Some lesbians may prefer to identify as gay or as gay women."]
+        },
+        {
+            "tag": "cbt",
+            "patterns": ["what is cbt", "whats cbt", "cbt", "cock and ball torture", "what is cock and ball torture"],
+            "responses": ["Cock and ball torture (CBT) is a sexual activity involving the application of pain or constriction to the penis or testicles. This may involve directly painful activities, such as genital piercing, wax play, genital spanking, squeezing, ball-busting, genital flogging, urethral play, tickle torture, erotic electrostimulation, kneeing or kicking. The recipient of such activities may receive direct physical pleasure via masochism, or emotional pleasure through erotic humiliation, or knowledge that the play is pleasing to a sadistic dominant. Many of these practices carry significant health risks."]
+        }
+    ]
+}
