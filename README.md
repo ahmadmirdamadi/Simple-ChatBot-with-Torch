@@ -21,3 +21,6 @@ This app is a chatbot that uses a deep learning model to respond to user inputs.
     - User input becomes a bag of words.
     - The model predicts the most likely output as a label.
     - If the probability of prediction is higher than a certain limit, one of the responses related to that tag is selected from the ``intents.json'' file and displayed to the user
+
+
+Data:  https://www.kaggle.com/datasets/sheetaljade2019/intentsjson
